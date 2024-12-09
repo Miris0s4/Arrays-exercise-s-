@@ -1,0 +1,26 @@
+START
+  DECLARE addIns[5] = ["Whipped cream", "Cinnamon", "Chocolate sauce", "Amaretto", "Irish whiskey"]
+  DECLARE prices[5] = [0.89, 0.25, 0.59, 1.50, 1.75]
+  DECLARE totalPrice = 2.00
+  DECLARE addIn
+  WHILE True
+    PRINT "Enter add-in (or 'done' to finish):"
+    INPUT addIn
+    IF addIn == "done"
+      BREAK
+    END IF
+    DECLARE found = False
+    FOR i FROM 0 TO 4
+      IF addIn == addIns[i]
+        totalPrice = totalPrice + prices[i]
+        PRINT "Price of ", addIn, " is $", prices[i]
+        found = True
+        BREAK
+      END IF
+    END FOR
+    IF found == False
+      PRINT "Sorry, we do not carry that."
+    END IF
+  END WHILE
+  PRINT "Total price for the order is $", totalPrice
+END
