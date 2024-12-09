@@ -1,0 +1,12 @@
+START
+  DECLARE array[20]
+  FOR i FROM 0 TO 19
+    PRINT "Enter number ", i+1
+    INPUT array[i]
+  END FOR 
+  REVERSE arrray 
+  PRINT "Numbers in reverse order:"
+  FOR i FROM 19 TO 0 
+    PRINT array[i]
+  END FOR 
+END 
