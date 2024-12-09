@@ -1,0 +1,18 @@
+START
+  DECLARE array[20] 
+  DECLARE counter = 0 
+  WHILE counter < 20
+    PRINT "Enter number (or -1 to stop):"
+    INPUT number 
+    IF number == -1 
+      BREAK
+    END IF 
+    array[counter] = number 
+    counter = counter + 1
+  END WHILE 
+  REVERSE array 
+  PRINT "Numbers in reverse order:"
+  FOR i FROM counter -1 TO 0
+    PRINT array[i]
+  END FOR 
+END 
